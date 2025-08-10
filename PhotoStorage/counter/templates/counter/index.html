@@ -40,13 +40,17 @@ input[type="submit"] {
 </head>
 <body>
     <div class="main-awnser">
-        <h2>the humber of words in the '{{text}}' is : {{char_counter | slugify}} <h2>        
+        {% if char_counter == 0 %}
+            <h2>Empty !!!<h2>
+        {% else %}    
+            <h2>the humber of words in the '{{text}}' is : {{char_counter | slugify}} <h2>
+        {% endif %}
     </div>
 
     <div class="main-container">
-        <form action="" method="post" >
+        <form action="." method="post" >
             {% csrf_token %}
-            <input type="text" name="mytest"> <br>
+            <input type="text" name="mytest" placeholder="enter word to count"> <br>
             <input type="submit">
         </form>
     </div>

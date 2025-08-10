@@ -12,20 +12,37 @@
     
 }
 
+
+.main-awnser {
+    text-align: center;
+}
+
 input[type="text"] {
     height: 200px;
+    border-width: 2%;
+    border-radius: 10%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
 }
 
 
 input[type="submit"] {
     padding: .2%;
     width:154.89px;
+    border-width: 2px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
 }
 
 </style>
 
 </head>
 <body>
+    <div class="main-awnser">
+        <h2>the humber of words in the '{{text}}' is : {{char_counter | slugify}} <h2>        
+    </div>
+
     <div class="main-container">
         <form action="" method="post" >
             {% csrf_token %}

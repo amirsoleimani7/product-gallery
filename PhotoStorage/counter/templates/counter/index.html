@@ -6,9 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-
-    this is the counter page
     
+
+
+    <div class="main-container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="mytest">
+            <input type="submit">
+        </form>
+    </div>
+
+
 
 </body>
 </html>

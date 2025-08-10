@@ -3,16 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>counter</title>
+
+<style>
+
+.main-container {
+    text-align: center;
+    
+}
+
+input[type="text"] {
+    height: 200px;
+}
+
+
+input[type="submit"] {
+    padding: .2%;
+    width:154.89px;
+}
+
+</style>
+
 </head>
 <body>
-    
-
-
     <div class="main-container">
-        <form action="" method="post">
+        <form action="" method="post" >
             {% csrf_token %}
-            <input type="text" name="mytest">
+            <input type="text" name="mytest"> <br>
             <input type="submit">
         </form>
     </div>

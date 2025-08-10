@@ -2,7 +2,6 @@ from django.shortcuts import render
 from translate import Translator
 import pyjokes
 
-
 def traslate(request):
 
     text = ''
@@ -18,12 +17,15 @@ def traslate(request):
     translator = Translator(to_lang=to)
     translation = translator.translate(text)
 
+    joke = pyjokes.get_joke()
+
     print(f"the translation is : {translation}")
 
     context= {
         'text' : text,
         'translation' :  translation ,
-        'joke' : 
+        'joke' : joke , 
     }
+    
     return render(request , 'translator/index.html' , context)
 

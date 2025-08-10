@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>translation page</title>
+
+<style>
+
+body {
+    text-align: center;
+}
+
+</style>
+
 </head>
+
+
+
+
 <body>
     
     <div class="submition-form">
@@ -12,10 +25,17 @@
             {% csrf_token %}
             <input type="text" name="text">
             to : <input type="text" name="lang">
-
             <input type="submit">
         </form>
     </div>
+
+    <div  class="awnser-form">
+        <h2> the text is : {{text}} </h2>        
+        <h2>the translation is : {{translation}}</h2>
+        <h2>the random joke is : {{joke}}</h2>
+    </div>
+
+
 
 
 

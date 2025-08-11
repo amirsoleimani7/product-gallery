@@ -18,5 +18,12 @@
         <input type="submit" placeholder="search">
     </form>
 
+    {% if res %}
+        {{res}}
+        <a href="{{link}}">The pages link</a>
+    {% else %}
+        <h2>no resualt</h2>
+
+    {% endif %}
 </body>
 </html>

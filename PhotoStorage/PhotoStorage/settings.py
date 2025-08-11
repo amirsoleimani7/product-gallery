@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'wikipedia' ,
+    'wikipedia1' ,
     'gallery',
     'counter' ,
     'translator' , 

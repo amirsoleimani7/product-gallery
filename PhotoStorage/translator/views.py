@@ -26,6 +26,6 @@ def traslate(request):
         'translation' :  translation ,
         'joke' : joke , 
     }
-    
+
     return render(request , 'translator/index.html' , context)
 

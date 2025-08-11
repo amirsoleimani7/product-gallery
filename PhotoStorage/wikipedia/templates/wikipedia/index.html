@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<style>
+    body {text-align: center;}
+
+</style>
+
 </head>
 <body>
-    wiki page
-    
+    <h1>wiki search page</h1>
+    <form action="." method="post">
+        {% csrf_token %}
+        <input type="text" name="search">
+        <input type="submit" placeholder="search">
+    </form>
+
 </body>
 </html>

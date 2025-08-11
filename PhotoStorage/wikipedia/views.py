@@ -1,3 +1,11 @@
 from django.shortcuts import render
+import wikipedia
 
-# Create your views here.
+def home(request):
+
+
+
+    context = {}
+
+
+    return render(request , 'wikipedia/index.html' , context)

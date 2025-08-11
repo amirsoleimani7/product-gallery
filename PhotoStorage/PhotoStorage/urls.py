@@ -23,6 +23,7 @@ urlpatterns = [
     path('gallery/' , include('gallery.urls')) , 
     path('counter/' , include('counter.urls')) , 
     path('translate/' , include('translator.urls')) , 
+    path('wiki/' , include('wikipedia.urls')) , 
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

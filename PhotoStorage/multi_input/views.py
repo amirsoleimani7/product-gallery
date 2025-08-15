@@ -22,13 +22,13 @@ def home(request):
 
 
         elif unsub:
-            print(f"person unsubed from :  {email}")
 
+            print(f"person unsubed from :  {email}")
             try :
                 wanted_email = NewsEmail.objects.filter(user_email=email)
+                print(f"the email is : {wanted_email}")
                 wanted_email.delete()
                 
-                print(f"the email is : {wanted_email}")
            
             except:
                 print(f"there was som erroes")

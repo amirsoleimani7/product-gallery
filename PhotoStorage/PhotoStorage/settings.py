@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'muti_input' ,
+    'multi_input' ,
     'wikipedia1' ,
     'gallery',
     'counter' ,

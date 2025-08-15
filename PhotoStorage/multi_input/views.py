@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import NewsEmail
+
 
 def home(request):
 
@@ -12,18 +14,27 @@ def home(request):
         sub = request.POST.get('subscribe')
         unsub = request.POST.get('unsubscribe')
 
-        print(f"the user's email is : {email}")
-        print(f"the sub button is : {sub}")
-        print(f"the unsub button is : {unsub}")
+        if sub:
+            print(f"person subed to :  {email}")
+            new_emial = NewsEmail()
+            new_emial.user_email = email
+            new_emial.save()
 
-    print(f"type of sub is : {type(sub)} , {type(unsub)}")
+
+        elif unsub:
+            print(f"person unsubed from :  {email}")
+
+            try :
+                wanted_email = NewsEmail.objects.filter(user_email=email)
+                wanted_email.delete()
+                
+                print(f"the email is : {wanted_email}")
+           
+            except:
+                print(f"there was som erroes")
 
 
-    if sub:
-        print("person subed")
-    if unsub:
-        print("person unsubed")
-
+           
 
 
     return render(request , 'multi_input/index.html' , context= {})

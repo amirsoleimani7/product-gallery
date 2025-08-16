@@ -14,6 +14,9 @@ def home(request):
         sub = request.POST.get('subscribe')
         unsub = request.POST.get('unsubscribe')
 
+        print(f"the sub sutton is : {sub}")
+        print(f"the unsub button is : {unsub}")
+
         if sub:
             print(f"person subed to :  {email}")
             new_emial = NewsEmail()

@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>email page</title>
+
+    <style>
+        .email_form {text-align: center;}
+    </style>
+
 </head>
 <body>
-    <h1>this is the email's page</h1>
+    
+    <h1 style="text-align: center;">this is the email's page</h1>
 
+    <div class="email_form">
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="address">To :</label>
+        <input id="address" type="email" name="address"> <br><br>
+
+        <label for="subject">Subject : </label> 
+        <input id="subject" name="subject"> <br><br>
+
+        <label for="message">Message : </label>
+        <input id="message" name="message">
+        
+        <input type="submit">
+    </form>
+    </div>
+
+    {% if res %}
+        {{res}}
+    {% endif %}
 </body>
 </html>

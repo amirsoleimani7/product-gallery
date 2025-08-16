@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'email_sender' , 
     'multi_input' ,
     'wikipedia1' ,
     'gallery',

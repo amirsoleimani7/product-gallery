@@ -25,6 +25,7 @@ urlpatterns = [
     path('translate/' , include('translator.urls')) , 
     path('wiki/' , include('wikipedia1.urls')) ,
     path('news/' , include('multi_input.urls')) , 
+    path('email/' , include('email_sender.urls')) , 
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

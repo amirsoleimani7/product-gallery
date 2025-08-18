@@ -15,8 +15,6 @@ def home(request):
         print(f"end email is : {end_email}")
         print(f"subject is : {subject}")
         print(f"message is : {message}")
-
-
         
         if end_email and subject and message :
             try :

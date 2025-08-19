@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Paginator </title>
 </head>
 <body>
-    paginator page
+    <div class="container">
+        {% for post in page_obj.object_list %}
+            <h1>{{post.title}}</h1>
+            <small>{{post.author}}</small>
+            <p>{{post.content}}</p>
+            <hr>
+        {% endfor %}
+    </div>
+
+    <center>
+        {% if page_obj.has_previous %}
+        <a href="?page={{page_obj.previous_page_number}}">previous page</a>
+        {% endif %}
+        <span>{{page_obj.number}}</span>
+        {% if page_obj.has_next %}
+        <a href="?page={{page_obj.next_page_number}}">next page</a>
+        {% endif %}
+    </center>
+
+
 </body>
 </html>

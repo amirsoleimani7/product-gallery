@@ -28,9 +28,11 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
+RECAPTCHA_PUBLIC_KEY = '6Ldmq6srAAAAALB5xDZ9nPacy4vy0AtMsBpqRl9x'
+RECAPTCHA_PRIVATE_KEY = '6Ldmq6srAAAAAF16DGxNP24m8RzDF9S3uRK37GSZ'
 
 INSTALLED_APPS = [
+    'captcha' , 
     'email_sender' , 
     'multi_input' ,
     'wikipedia1' ,

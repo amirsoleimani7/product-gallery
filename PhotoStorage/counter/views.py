@@ -1,5 +1,5 @@
-from django.shortcuts import render
-
+from django.shortcuts import render , HttpResponse
+from .forms import ContactForm
 
 def word_counter(request):
     
@@ -25,3 +25,17 @@ def word_counter(request):
     
     return render(request , 'counter/index.html' , context)
 
+
+
+# adding google recapcha ... 
+def contact(request):
+    if request.method == 'POST':
+        form  = ContactForm()
+        if form.is_valid():
+            return HttpResponse("u r a human")
+        else :
+            return HttpResponse('u are a bot ma dude')
+    else:
+        form = ContactForm()
+
+    return render(request , 'counter/index.html' , {'form' : form})

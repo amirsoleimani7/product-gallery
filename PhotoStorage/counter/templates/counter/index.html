@@ -46,6 +46,8 @@ input[type="submit"] {
             <h2>the humber of words in the '{{text}}' is : {{char_counter | slugify}} <h2>
         {% endif %}
     </div>
+    
+
 
     <div class="main-container">
         <form action="." method="post" >
@@ -56,6 +58,13 @@ input[type="submit"] {
     </div>
 
 
+    <div class="captcha">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
 </body>
 </html>

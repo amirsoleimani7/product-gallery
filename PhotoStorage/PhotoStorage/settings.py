@@ -33,6 +33,7 @@ RECAPTCHA_PRIVATE_KEY = '6Ldmq6srAAAAAF16DGxNP24m8RzDF9S3uRK37GSZ'
 SILENCED_SYSTEM_CHECKS = ['django_recaptcha.recaptcha_test_key_error']
 
 INSTALLED_APPS = [
+    'paginator' , 
     'django_recaptcha' , 
     'email_sender' , 
     'multi_input' ,

@@ -35,7 +35,15 @@ input[type="submit"] {
 
 }
 
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;  /* optional spacing */
+}
+
+
 </style>
+
 
 </head>
 <body>
@@ -53,18 +61,21 @@ input[type="submit"] {
         <form action="." method="post" >
             {% csrf_token %}
             <input type="text" name="mytest" placeholder="enter word to count"> <br>
+            {{form}}
             <input type="submit">
         </form>
     </div>
 
-
-    <div class="captcha">
-        <form action="" method="post">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- 
+    <div action='.' class="captcha">
+        <form  method="post">
             {% csrf_token %}
-            {{ form.as_p }}
+            {{ form }}
             <button type="submit">Submit</button>
         </form>
-    </div>
+    </div> -->
+
 
 </body>
 </html>
